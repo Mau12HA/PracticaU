@@ -1,0 +1,150 @@
+﻿@model ArSpFi.Models.Reserva
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+
+<div class="row">
+    <div class="row justify-content-start">
+        <h2 class="text-dark h2" style="font-family: 'AhaWow';">Editar Reservacion</h2>
+    </div>
+    
+    <div class="row justify-content-end col align-self-end">
+        <a class="h4 text-white" asp-action="Index" style="font-family: 'AhaWow'; margin-left:600px">Lista de Reservas</a>
+    </div>
+    
+</div>
+
+
+<div class="row text-dark">
+    <hr />
+    <div class="col-md-8">
+        <form asp-action="Edit" class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdReserva" />
+            <div class="col-md-6">
+                <label asp-for="CodReserva" class="control-label" style="font-family: 'AhaWow'"></label>
+                <input asp-for="CodReserva" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="FechaCreacion" class="control-label" style="font-family: 'AhaWow'"></label>
+                <input asp-for="FechaCreacion" class="form-control" />
+                <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="NombCliente" class="control-label" style="font-family: 'AhaWow';"></label>
+                <div class="input-group form-group">
+
+                    <input asp-for="NombCliente" class="form-control" />
+                    <span asp-validation-for="NombCliente" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="CorreoCliente" class="control-label" style="font-family: 'AhaWow';"></label>
+                <div class="input-group form-group">
+
+                    <input asp-for="CorreoCliente" class="form-control" />
+                    <span asp-validation-for="CorreoCliente" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="TelefonoCliente" class="control-label" style="font-family: 'AhaWow';"></label>
+                <div class="input-group form-group">
+
+                    <input asp-for="TelefonoCliente" class="form-control" />
+                    <span asp-validation-for="TelefonoCliente" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="TipoTour" class="control-label" style="font-family: 'AhaWow';"></label>
+                <div class="form-group">
+
+                    <select asp-for="TipoTour" class="form-control">
+                        <option value="value"></option>
+                        <option value="Pesca en la Costa">Pesca en la Costa</option>
+                        <option value="Pesca en Altamar">Pesca en Altamar</option>
+                        <option value="Isla Tortuga">Isla Tortuga</option>
+                    </select>
+                    @*<input asp-for="TipoTour" class="form-control" />*@
+                    <span asp-validation-for="TipoTour" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="FechaReservacion" class="control-label" style="font-family:'AhaWow'"></label>
+                <div class="form-group">
+
+                    <input type="date" asp-for="FechaReservacion" class="form-control" />
+                    <span asp-validation-for="FechaReservacion" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="Duracion" class="control-label" style="font-family: 'AhaWow';"></label>
+                <div class="input-group form-group">
+
+                    <select asp-for="Duracion" class="form-control">
+                        <option value="value"></option>
+                        <option value="Medio Día">Medio Día</option>
+                        <option value="Día Completo">Día Completo</option>
+                    </select>
+                    @*<input asp-for="Duracion" class="form-control" />*@
+                    <span asp-validation-for="Duracion" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="CantPasajeros" class="control-label" style="font-family: 'AhaWow';"></label>
+                <div class="input-group form-group">
+                    <input asp-for="CantPasajeros" class="form-control" />
+                    <span asp-validation-for="CantPasajeros" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="Yate" class="control-label" style="font-family: 'AhaWow'"></label>
+                <div class="input-group form-group">
+
+                    <select asp-for="Yate" class="form-control">
+                        <option value="value"></option>
+                        <option value="Deportista">Deportista</option>
+                        <option value="Viking">Viking</option>
+                    </select>
+                    @*<input asp-for="Yate" class="form-control" />*@
+                    <span asp-validation-for="Yate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="Estado" class="control-label"></label>
+                <div class="input-group form-group">
+
+                    <input asp-for="Estado" class="form-control" />
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+            </div>
+
+            @*<input type="hidden" asp-for="Estado" />
+                <input type="hidden" asp-for="FkUsuario" />*@
+            <div class="col-md-6">
+                <label asp-for="FkUsuario" class="control-label"></label>
+                <div class="input-group form-group">
+                    <select asp-for="FkUsuario" class="form-control" asp-items="ViewBag.FkUsuario"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-default bg-success" style="font-family: 'AhaWow'" />
+                @*<a class="h4 text-white" asp-action="Index" style="font-family: 'AhaWow'">Back to List</a>*@
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

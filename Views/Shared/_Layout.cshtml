@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ArguedasSportFishing</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/sweetalert2.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <link href="~/css/estilos.css" rel="stylesheet" />
+    <link href="~/layout/styles/layout.css" rel="stylesheet" />
+    <link href="~/layout/styles/framework.css" rel="stylesheet" />
+</head>
+<body id="top">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-4" style="height:80px; padding-left:10px">
+            <div class="container">
+                <a class="h3" asp-area="" asp-controller="Home" asp-action="Index" style="font-family: 'AhaWow';">Costa Rica </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="font-family: 'AhaWow'; margin-left:30px;">
+                    <ul class="navbar-nav flex-grow-1">
+                        @*<li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
+                        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#Charters">YATES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#Especies">ESPECIES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#contact">CONTACTANOS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse collapse d-sm-inline justify-content-end">
+                    <ul class="navbar-nav d-sm-inline-flex">
+                        <li class="nav-link"><i class=""></i> <a class="nav-link text-success" asp-controller="Reservas" asp-action="Index" style="font-family: 'AhaWow'">Listado Reservas</a></li>
+                        <li class="nav-link"><i class=""></i> <a class="nav-link text-success" asp-controller="Reservas" asp-action="Create" style="font-family: 'AhaWow'; margin-right: 25px;">RESERVAR TOUR</a></li>
+                        <li class="nav-link"><i class=""></i> <a class="nav-link text-primary" asp-controller="Usuarios" asp-action="Index" style="font-family: 'AhaWow'">Lista de Usuarios</a></li>
+                        <li class="nav-link"><i class=""></i> <a class="nav-link text-primary" asp-controller="Usuarios" asp-action="Login" style="font-family: 'AhaWow'">LOGIN</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+      @*<div style="background-image:url(/wwwroot/images/rocas.jpg)">*@
+
+<div class="container">
+    
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    
+</div>
+
+     @*</div>*@
+
+    <!--<footer class="border-top footer text-muted">
+        <div class="container">
+            <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved - <a>Arguedas Fishing</a></p>-->
+    @*&copy; 2021 - ArguedasSportFishing - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+    <!--</div>
+    </footer>-->
+    <!--<div class="wrapper ">
+        <footer id="footer" class="hoc clear">-->
+    <!-- ################################################################################################ -->
+    <!--<div class="one_quarter first" style="font-family: 'AhaWow'">
+        <h6 class="title" style="font-family: 'AhaWow'">Locacion</h6>
+        <address class="btmspace-30">
+            Puntarenas,<br>
+            Costa Rica<br>
+        </address>
+
+    </div>
+    <div class="one_quarter">
+        <h6 class="title" style="font-family: 'AhaWow'">Informacion</h6>
+        <ul class="nospace" style="font-family: 'AhaWow'">
+            <li class="btmspace-10"><i class="fa fa-phone"></i>CR: +506 6040 5011</li>
+            <li class="btmspace-10"><i class="fa fa-phone"></i>USA: +1 (504) 232 0847</li>
+            <li><i class="fa fa-envelope-o"></i> info@arguedasfishing.com</li>
+        </ul>
+    </div>
+    <div class="one_quarter" style="font-family: 'AhaWow'">
+        <h6 class="title" style="font-family: 'AhaWow'">Links</h6>
+        <ul class="nospace linklist">
+            <li><a href="https://www.incopesca.go.cr/">Incopesca</a></li>
+            <li><a href="https://es.fishcostarica.org/">FECOP</a></li>
+            <li><a href="https://igfa.org/">IGFA</a></li>
+        </ul>
+    </div>
+    <div class="one_quarter" style="font-family: 'AhaWow'">
+        <h6 class="title" style="font-family: 'AhaWow'">Mas..</h6>
+        <ul class="nospace linklist">
+            <li><a href="https://www.ict.go.cr/es/">ICT-Instituto Costarricense de Turismo</a></li>
+
+
+        </ul>
+    </div>-->
+    <!-- ################################################################################################ -->
+    <!--</footer>
+    </div>-->
+    <!-- ################################################################################################ -->
+    <!--<div class="wrapper row5" style="font-family: 'AhaWow'">
+        <div id="copyright" class="hoc clear" style="font-family: 'AhaWow'">-->
+    <!-- ################################################################################################ -->
+    <!--<p class="fl_left">Copyright &copy; 2021 - All Rights Reserved - <a>Arguedas Fishing</a></p>-->
+    <!-- ################################################################################################ -->
+    <!--</div>
+    </div>-->
+    <!-- ################################################################################################ -->
+    <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+
+
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/layout/scripts/jquery.min.js"></script>
+    <script src="~/layout/scripts/jquery.backtotop.js"></script>
+
+    <script src="~/js/sweetalert2.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@model ArSpFi.Models.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+
+<h2 class="text-dark h2" style="font-family: 'AhaWow'">Esta seguro que quiere Eliminar este Usuario?</h2>
+
+<div class="text-dark">
+
+    <hr />
+    <dl class="dl-horizontal row">
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.FechaCreado)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.FechaCreado)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.Activo)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Activo)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @*@Html.DisplayNameFor(model => model.FkRolNavigation)*@ Perfil
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.FkRolNavigation.NombRol)
+        </dd>
+
+    </dl>
+
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdUsuario" />
+        <input type="submit" value="Eliminar" class="btn btn-default bg-danger" style="font-family: 'AhaWow'" /> |
+        <a class="h4" asp-action="Index" style="font-family: 'AhaWow'; margin-left:5px">Regresar</a>
+    </form>
+   
+</div>
+

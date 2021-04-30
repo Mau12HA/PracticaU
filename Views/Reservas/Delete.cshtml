@@ -1,0 +1,92 @@
+﻿@model ArSpFi.Models.Reserva
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+
+<h2 class="text-dark h2" style="font-family: 'AhaWow'">Desea eliminar esta reservacion?</h2>
+<div class="text-dark">
+    
+    <hr />
+    <dl class="dl-horizontal row">
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @Html.DisplayNameFor(model => model.CodReserva)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.CodReserva)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @*@Html.DisplayNameFor(model => model.NombCliente)*@ Cliente
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.NombCliente)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @*@Html.DisplayNameFor(model => model.CorreoCliente)*@Correo
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.CorreoCliente)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @*@Html.DisplayNameFor(model => model.TelefonoCliente)*@ Telefono
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.TelefonoCliente)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @*@Html.DisplayNameFor(model => model.FechaReservacion)*@ Fecha Tour
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.FechaReservacion)
+        </dd>
+        <!--<dt class="col-md-2">-->
+            @*@Html.DisplayNameFor(model => model.TipoTour)*@
+        <!--</dt>
+        <dd class="col-md-10">-->
+            @*@Html.DisplayFor(model => model.TipoTour)*@
+        <!--</dd>
+        <dt class="col-md-2">-->
+            @*@Html.DisplayNameFor(model => model.Duracion)*@
+        <!--</dt>
+        <dd class="col-md-10">-->
+            @*@Html.DisplayFor(model => model.Duracion)*@
+        <!--</dd>
+        <dt class="col-md-2">-->
+            @*@Html.DisplayNameFor(model => model.CantPasajeros)*@ <!--Pasajeros
+        </dt>
+        <dd class="col-md-10">-->
+           @* @Html.DisplayFor(model => model.CantPasajeros)*@
+        <!--</dd>-->
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @Html.DisplayNameFor(model => model.Yate)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Yate)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow'">
+            @*@Html.DisplayNameFor(model => model.FkUsuarioNavigation)*@ Usuario
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.FkUsuarioNavigation.Nombre)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdReserva" />
+        <input type="submit" value="Eliminar" class="btn btn-default bg-danger" style="font-family: 'AhaWow'" /> |
+        <a class="h4" asp-action="Index" style="font-family: 'AhaWow'; margin-left:5px">Regresar</a>
+    </form>
+</div>

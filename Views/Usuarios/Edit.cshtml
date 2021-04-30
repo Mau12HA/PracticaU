@@ -1,0 +1,62 @@
+﻿@model ArSpFi.Models.Usuario
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+
+<h2 class="text-dark h2" style="font-family: 'AhaWow';">Editar Usuario</h2>
+
+
+<div class="row text-dark">
+    <hr />
+    <div class="col-md-8">
+        <form asp-action="Edit" class=" row m-lg-3 text-dark">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdUsuario" />
+            <div class="form-group col-md-6">
+                <label asp-for="Nombre" class="control-label" style="font-family: 'AhaWow';"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Correo" class="control-label" style="font-family: 'AhaWow';"></label>
+                <input asp-for="Correo" class="form-control" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Password" class="control-label" style="font-family: 'AhaWow';"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="FechaCreado" class="control-label" style="font-family: 'AhaWow';"></label>
+                <input readonly type="datetime" asp-for="FechaCreado" class="form-control" />
+                <span asp-validation-for="FechaCreado" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Activo" class="control-label" style="font-family: 'AhaWow';"></label>
+                <input asp-for="Activo" class="form-control" />
+                <span asp-validation-for="Activo" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="FkRol" class="control-label" style="font-family: 'AhaWow';"></label>
+                <select asp-for="FkRol" class="form-control" asp-items="ViewBag.FkRol"></select>
+                <span asp-validation-for="FkRol" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:25px">
+                <input type="submit" value="Guardar" class="btn btn-default bg-success" style="font-family: 'AhaWow'; margin-left:15px" />
+            
+                <a class="text-white h4" asp-action="Index" style="font-family: 'AhaWow'; margin-left:15px">Lista de Usuarios</a>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

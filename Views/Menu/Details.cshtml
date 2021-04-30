@@ -1,0 +1,91 @@
+﻿@model ArSpFi.Models.Reserva
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodReserva)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodReserva)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NombCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NombCliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CorreoCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CorreoCliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoCliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaReservacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaReservacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoTour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Duracion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CantPasajeros)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CantPasajeros)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Yate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Yate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkUsuarioNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkUsuarioNavigation.Correo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdReserva">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,91 @@
+﻿@model ArSpFi.Models.Reserva
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+
+<h2 class="text-dark h2" style="font-family: 'AhaWow';">Detalles de la Reserva</h2>
+
+<div class="text-dark">
+    @*<h4 style="font-family: 'AhaWow';">Reserva</h4>*@
+    <hr />
+    <dl class="dl-horizontal row">
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @*@Html.DisplayNameFor(model => model.CodReserva)*@ Codigo Reservacion
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.CodReserva)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.NombCliente)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.NombCliente)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.CorreoCliente)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.CorreoCliente)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.TelefonoCliente)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.TelefonoCliente)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.FechaReservacion)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.FechaReservacion)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.TipoTour)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.TipoTour)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.Duracion)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Duracion)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+           @Html.DisplayNameFor(model => model.CantPasajeros)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.CantPasajeros)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.Yate)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Yate)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt class="col-md-2" style="font-family: 'AhaWow';">
+            @*@Html.DisplayNameFor(model => model.FkUsuarioNavigation)*@ Usuario
+        </dt>
+        <dd class="col-md-10">
+           @Html.DisplayFor(model => model.FkUsuarioNavigation.Nombre) 
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="text-danger h4" asp-action="Edit" asp-route-id="@Model.IdReserva" style="font-family: 'AhaWow';margin-right:5px">Editar</a> |
+    <a class="text-white h4" asp-action="Index" style="font-family: 'AhaWow';margin-left:5px">Volver a la lista</a>
+</div>
